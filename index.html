@@ -15,45 +15,11 @@
         <div class="progress-container">
           <div class="progress-bar" id="progress-bar"></div>
         </div>
-        <!-- Question 1 -->
-        <div class="question">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
-          <div class="answers">
-            <input type="radio" id="q1a1" name="q1" value="1" />
-            <label for="q1a1">Option 1</label>
-
-            <input type="radio" id="q1a2" name="q1" value="2" />
-            <label for="q1a2">Option 2</label>
-
-            <input type="radio" id="q1a3" name="q1" value="3" />
-            <label for="q1a3">Option 3</label>
-
-            <input type="radio" id="q1a4" name="q1" value="4" />
-            <label for="q1a4">Option 4</label>
-          </div>
-        </div>
-
-        <!-- Question 2 -->
-        <div class="question">
-          <p>What is the capital of Palestine?</p>
-          <div class="answers">
-            <input type="radio" id="q2a1" name="q2" value="1" />
-            <label for="q2a1">Gaza</label>
-
-            <input type="radio" id="q2a2" name="q2" value="2" />
-            <label for="q2a2">Jerusalem</label>
-
-            <input type="radio" id="q2a3" name="q2" value="3" />
-            <label for="q2a3">Hebron</label>
-
-            <input type="radio" id="q2a4" name="q2" value="4" />
-            <label for="q2a4">Nablus</label>
-          </div>
-        </div>
+        <div id="question-container"></div>
 
         <!-- Buttons -->
         <div class="form-buttons">
-          <button type="reset">Clear</button>
+          <button id="reset" type="reset">Clear</button>
           <button type="submit">Submit</button>
         </div>
       </form>
@@ -63,13 +29,14 @@
         <h2>Your Score</h2>
         <p>Total Questions: <span id="total-questions"></span></p>
         <p>Correct Answers: <span id="correct-answers"></span></p>
-        <p>Grade: <span id="grade"></span></p>
-        <p>Status: <span id="status"></span></p>
+        <p>Score: <span id="finalScore"></span></p>
+        <p>feed back: <span id="feedback"></span></p>
       </div>
 
-      <button  id="tog" class="switch">switch</button>
+      <button id="tog" class="switch">switch</button>
     </div>
 
     <script type="module" src="main.js"></script>
+    <script type="module" src="test.js"></script>
   </body>
 </html>

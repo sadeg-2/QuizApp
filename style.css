@@ -12,7 +12,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 
-     display: flex;             /* enables flexbox */
+    display: flex;             /* enables flexbox */
     flex-direction: column;    /* stack elements vertically */
     align-items: center;       /* center horizontally */
     text-align: center;        /* center text inside child elements */
@@ -27,7 +27,7 @@ body {
     color: #007c91;
 }
 #quiz-form{
-    display: none;
+    display: block;
 }
 .result {
     margin-top: 30px;
@@ -38,6 +38,7 @@ body {
     text-align: center;
     width: 60%;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: none;
 }
 
 .result h2 {
@@ -60,12 +61,16 @@ body {
     max-width: 600px;
     margin: 0 auto 20px auto;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    text-align: start;        /* center text inside child elements */
+    
 }
 
 /* Question text */
 .question p {
     font-size: 18px;
     font-weight: bold;
+    color: #788a8d;
     margin-bottom: 15px;
 }
 
@@ -118,7 +123,7 @@ body {
 /* Progress bar itself */
 .progress-bar {
     height: 100%;
-    width: 10%;           /* initial progress */
+    width: 0%;           /* initial progress */
     background-color: #00acc1;
     border-radius: 10px;
     transition: width 0.3s ease;
