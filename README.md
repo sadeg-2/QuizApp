@@ -1,58 +1,57 @@
-# Quiz App Technical requirements
+# 📝 Quiz App Assignment
 
-The app is a single page to show multi questions With the possibility of answering them
-and show final feedback
+## 🎯 Objective
+Build a **single-page Quiz App** using **OOP principles in JavaScript** (ES6 classes).  
+The app should display **all questions at once**, allow the user to **reset answers**, and show a **final score with pass/fail feedback** when submitted.  
+The quiz should also use **localStorage** to persist answers during an active attempt, but start fresh after finishing.
 
-## Folder Structure
+---
 
-- `modules` folder :
+## 👤 User Stories
 
-  - `Answers.js` class represent the user answer with result
-  - `QustionBank.js` class contains questions to select from it
-  - `Questions.js` class represent the main question
-  - `Quiz.js` class contains functionality to render the ui of the single app
-  - `Storage.js` class to manage the local storage and save user answers
+- As a user, I want to **see all questions on the screen at once** so I can answer them in any order.  
+- As a user, I want each question to show **multiple options** (multiple choice or true/false) so I can select one.  
+- As a user, I want a **reset button** so I can clear all my answers and start again.  
+- As a user, I want a **submit button** so I can finish the quiz.  
+- As a user, I want to see my **final score out of total questions**.  
+- As a user, I want to see whether I **passed or failed** (e.g., pass ≥ 70%).  
+- As a user, I want my answers to be **saved temporarily** so that if I refresh the page during the quiz, my selected answers remain.  
+- As a user, once I finish the quiz and refresh, I want the app to **start fresh with empty answers**.  
 
-- `diagram.drawio` diagram to show the logical relation between the classes
-- `index.html` the main structure of the app (entry point)
-- `style.css` the css style of the app
-- `main.js` the logic added to the app
+---
 
-## Requirements
+## 🔑 Acceptance Criteria
+1. The quiz displays **all questions at once**.  
+2. Each question allows **only one selected answer**.  
+3. A **submit button** shows final score + pass/fail.  
+4. A **reset button** clears all answers (in UI + localStorage).  
+5. If refreshed **before finishing**, answers should be restored.  
+6. If refreshed **after finishing**, a new attempt should start (no old results).  
+7. Must use **OOP principles** (classes, inheritance, encapsulation, polymorphism).  
 
-    1. form container to show list of questions:
-        - container should have a good appearance *
-        - should appear order to question in the container *
-        - container also have an progress bar  *
-    2.render the questions:
-            - initiate Quiz class
-                - Quiz class will get questions from Bank *
-                - Quiz class will create the question element for each question *
-                - then append it in the quiz container *
+---
 
-    3. question should show multiple options *
-        - allows only one selected option *
-    4.When question answered:
-            - update the progress bar *
-            - save the answers in storage *
-            - add the result in the quiz class *
-            - update quiz class list *
-    5. Handle reset button:
-        - clear the answers in storage *
-        - reset the progress bar *
-        - clear the result in quiz class *
-    6. Handle submit button:
-        - hide the containers of questions *
-        - show container of result:
-            - get the result of the attempt *
-            - calculate the percentage of correct answers *
-            - if percentage ≥ 70% then render to the user pass else render fail *
-    7. When reloading the page :
-        -  before finishing :
-            - get list of answers from local storage *
-            - loop in the list create questions element *
-            - if question answered show the user answer *
 
-        - after finishing :
-            - initiate the page *
-            - render the questions *
+## ✅ Deliverables
+1. A fully functional **Quiz App** in the browser.  
+   - Must demonstrate **OOP in JavaScript**.  
+   - Must use **DOM manipulation** to render questions and results.  
+   - Must use **localStorage** for temporary persistence.  
+   - Must include at least **10 questions** (mix of multiple-choice & true/false).  
+   - Push the project to **GitHub** with this README file included.  
+2. Diagram explaining the design of the classes and their relations (use [bpmn.io](https://bpmn.io/) or [lucidchart](https://www.lucidchart.com/pages) or just draw in a paper) and attach a screenshot for your diagram. Note that this diagram is NOT UML! 
+3. Technical requirement document that translate these user stories into detailed technical items.
+---
+
+## 💯 Evaluation Criteria
+| Criteria | Weight |
+|----------|--------|
+| Correct use of OOP (classes, inheritance, polymorphism) | 40% |
+| DOM manipulation (rendering, updating, result screen)   | 25% |
+| Persistence with localStorage                           | 20% |
+| Code structure & readability                            | 10% |
+| Extra features (styling, animations, categories, etc.)  | 5% |
+
+---
+## How to submit
+Create a repository including this `README.md` file and the other **Deliverables** mentioned above. 

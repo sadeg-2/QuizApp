@@ -95,13 +95,13 @@ export class Quiz {
       }
     });
     console.log(this.#listUserAnswer);
-    //this.#storage.saveAnswers(this.#listUserAnswer);
+    this.#storage.saveAnswers(this.#listUserAnswer);
   }
 
   clearData() {
     this.#listUserAnswer.forEach((e) => {
       e.userAnswer = null;
     });
-    //this.#storage.saveAnswers([]);
+    this.#storage.saveAnswers([]);
   }
 }

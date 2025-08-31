@@ -19,12 +19,12 @@ form.addEventListener("submit", (e) => {
   correctAnswersEl.textContent = quiz.correctAnswers;
   finalScoreEl.textContent = quiz.finalScore + "%";
   feedbackEl.textContent = quiz.getFeedBack();
+  quiz.clearData();
 });
 
 const containerKey = "question-container";
 const quiz = new Quiz(containerKey);
 quiz.renderQuestions();
-
 
 // any change of answers will handle here
 form.addEventListener("change", () => {
@@ -47,17 +47,17 @@ clear.addEventListener("click", (e) => {
   progressBar.style.width = 0 + "%";
   quiz.clearData();
 });
-
-const tog = document.getElementById("tog");
-let flip = false;
-tog.addEventListener("click", (e) => {
-  if (flip) {
-    form.style.display = "none";
-    result.style.display = "block";
-    flip = false;
-  } else {
-    result.style.display = "none";
-    form.style.display = "block";
-    flip = true;
-  }
-});
+// this logic just for testing purpose
+// const tog = document.getElementById("tog");
+// let flip = false;
+// tog.addEventListener("click", (e) => {
+//   if (flip) {
+//     form.style.display = "none";
+//     result.style.display = "block";
+//     flip = false;
+//   } else {
+//     result.style.display = "none";
+//     form.style.display = "block";
+//     flip = true;
+//   }
+// });

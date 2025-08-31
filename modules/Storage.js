@@ -1,3 +1,6 @@
+import { Answers } from "./Answers.js";
+import { Question } from "./Questions.js";
+
 export class Storage {
   #key;
 
@@ -12,7 +15,16 @@ export class Storage {
 
   getAnswers() {
     const storedList = localStorage.getItem(this.#key);
-    const parsedList = JSON.parse(storedList) || [];
+    let parsedList = JSON.parse(storedList) || [];
+
+    if (parsedList.length > 0) {
+      parsedList = parsedList.map((item) => {
+        return new Answers(
+          item.userAnswer,
+          new Question(item.id, item.qtext, item.answers, item.indexAnswer)
+        );
+      });
+    }
     return parsedList;
   }
 }
