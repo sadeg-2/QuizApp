@@ -18,7 +18,7 @@ export class Quiz {
 
   getRefreshAnswers() {
     return new QuestionBank()
-      .getListQuestions(5)
+      .getListQuestions(10)
       .map((q) => new Answers(null, q));
   }
   get listUserAnswer() {

@@ -11,6 +11,21 @@ export class QuestionBank {
       1
     ),
     new Question("5", "is The Moon made From Cheese ? ", [true, false], 0),
+    new Question("6", "is The Sun made From fire ? ", [true, false], 1),
+    new Question("7", "is The Earth flat ? ", [true, false], 0),
+    new Question(
+      "8",
+      "is Mohammed Saad BackEnd Developer ? ",
+      [true, false],
+      1
+    ),
+    new Question("9", "Do you love me ? ", [true, false], 0),
+    new Question(
+      "a",
+      "What is the capital of Palestine ?",
+      ["AlQuds", "Jerausalem", "Gaza", "Safad"],
+      1
+    ),
   ];
 
   constructor() {}

@@ -40,6 +40,7 @@ form.addEventListener("change", () => {
 form.addEventListener("click", function (event) {
   if (event.target.type == "radio") {
     const userAnswer = event.target.dataset["userAnswer"];
+    console.log(userAnswer);
     quiz.solveQuestionWithTag(userAnswer);
   }
 });
